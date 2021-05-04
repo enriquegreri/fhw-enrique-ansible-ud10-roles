@@ -1,0 +1,16 @@
+- name: Unistall apache2
+  apt:
+    name: apache2
+    state: absent
+- name: Unistall nginx
+  apt:
+    name: nginx
+    state: absent
+- name: Remove all content
+  file: 
+    path: /var/www/html
+    state: absent
+- name: Remove all content 2
+  file: 
+    path: /var/www/html
+    state: directory

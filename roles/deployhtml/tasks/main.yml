@@ -1,0 +1,8 @@
+- name: Copy HTML files
+  copy:
+    src: /home/vagrant/ud10-roles/roles/deployhtml/files/index-{{env}}.html
+    dest: /var/www/html/index.html
+    owner: www-data
+    group: www-data
+  notify:
+    - nginx_restart
